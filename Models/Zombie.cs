@@ -1,11 +1,14 @@
 using System;
 
-public class Zombie : ICombustable
+namespace Dependency_Inversion
 {
-    public void Burn (string attack)
+    public class Zombie : Killable, ICombustable
     {
-        if (attack == "Fire") {
-            Console.WriteLine("You just killed the Zombie");
+        public void Burn (string attack)
+        {
+            if (attack == "Fire") {
+                Console.WriteLine("You just killed the Zombie");
+            }
         }
     }
 }

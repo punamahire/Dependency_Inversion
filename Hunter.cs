@@ -29,6 +29,11 @@ namespace Dependency_Inversion
             monster.Stab("Silver");   // Stabs with silver knife
         }
 
+        public void DefiniteKill (Killable monster)
+        {
+            monster.KillWithUlimateWeapon();
+        }
+
         public override string ToString () {
             return $"{FirstName} {LastName} kills monsters with the following weapons: {String.Join(", ", Weapons)}";
         }

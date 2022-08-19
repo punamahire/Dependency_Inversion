@@ -1,11 +1,14 @@
 using System;
 
-public class Wight : IStabbable
+namespace Dependency_Inversion
 {
-    public void Stab (string attack)
+    public class Wight : Killable, IStabbable
     {
-        if (attack == "Silver") {
-            Console.WriteLine("You just killed the Wight");
+        public void Stab (string attack)
+        {
+            if (attack == "Silver") {
+                Console.WriteLine("You just killed the Wight");
+            }
         }
     }
 }

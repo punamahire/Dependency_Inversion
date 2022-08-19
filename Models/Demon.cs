@@ -1,25 +1,28 @@
 using System;
 
-public class Demon : ICombustable, ISprinkleable, IStabbable
+namespace Dependency_Inversion
 {
-    public void Burn (string attack)
+    public class Demon : Killable, ICombustable, ISprinkleable, IStabbable
     {
-        if (attack == "Fire") {
-            Console.WriteLine("You just killed the Demon");
+        public void Burn (string attack)
+        {
+            if (attack == "Fire") {
+                Console.WriteLine("You just killed the Demon");
+            }
         }
-    }
 
-    public void Douse (string attack)
-    {
-        if (attack == "Holy Water") {
-            Console.WriteLine("You just killed the Demon");
+        public void Douse (string attack)
+        {
+            if (attack == "Holy Water") {
+                Console.WriteLine("You just killed the Demon");
+            }
         }
-    }
 
-    public void Stab (string attack)
-    {
-        if (attack == "Silver") {
-            Console.WriteLine("You just killed the Demon");
+        public void Stab (string attack)
+        {
+            if (attack == "Silver") {
+                Console.WriteLine("You just killed the Demon");
+            }
         }
     }
 }

@@ -1,11 +1,14 @@
 using System;
 
-public class Mummy : ICombustable
+namespace Dependency_Inversion
 {
-    public void Burn (string attack)
+    public class Mummy : Killable, ICombustable
     {
-        if (attack == "Fire") {
-            Console.WriteLine("You just killed the Mummy");
+        public void Burn (string attack)
+        {
+            if (attack == "Fire") {
+                Console.WriteLine("You just killed the Mummy");
+            }
         }
     }
 }

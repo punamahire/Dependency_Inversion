@@ -1,18 +1,21 @@
 using System;
 
-public class Ghoul : ISprinkleable, IStabbable
+namespace Dependency_Inversion
 {
-    public void Douse (string attack)
+    public class Ghoul : Killable, ISprinkleable, IStabbable
     {
-        if (attack == "Holy Water") {
-            Console.WriteLine("You just killed the Ghoul");
+        public void Douse (string attack)
+        {
+            if (attack == "Holy Water") {
+                Console.WriteLine("You just killed the Ghoul");
+            }
         }
-    }
 
-    public void Stab (string attack)
-    {
-        if (attack == "Silver") {
-            Console.WriteLine("You just killed the Ghoul");
+        public void Stab (string attack)
+        {
+            if (attack == "Silver") {
+                Console.WriteLine("You just killed the Ghoul");
+            }
         }
     }
 }

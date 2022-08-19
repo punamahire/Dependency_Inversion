@@ -1,18 +1,21 @@
 using System;
 
-public class Vampire : IStabbable, ICombustable
+namespace Dependency_Inversion
 {
-    public void Stab (string attack)
+    public class Vampire : Killable, IStabbable, ICombustable
     {
-        if (attack == "Silver") {
-            Console.WriteLine("You just killed the Vampire");
+        public void Stab (string attack)
+        {
+            if (attack == "Silver") {
+                Console.WriteLine("You just killed the Vampire");
+            }
         }
-    }
 
-    public void Burn (string attack)
-    {
-        if (attack == "Fire") {
-            Console.WriteLine("You just killed the Vampire");
+        public void Burn (string attack)
+        {
+            if (attack == "Fire") {
+                Console.WriteLine("You just killed the Vampire");
+            }
         }
     }
 }

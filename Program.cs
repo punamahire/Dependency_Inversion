@@ -28,6 +28,9 @@ namespace Dependency_Inversion
 
             Zombie zombie = new Zombie();
             VonRimmersmark.Ignite(zombie);
+
+            Demon beast = new Demon();
+            VonRimmersmark.DefiniteKill(beast);
         }
     }
 }
